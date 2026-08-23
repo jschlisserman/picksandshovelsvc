@@ -1,25 +1,5 @@
 [build]
   command = "pnpm build"
-  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "22"
-
-# Apex → www (configure both domains in Netlify)
-[[redirects]]
-  from = "https://picksandshovelsvc.com/*"
-  to = "https://www.picksandshovelsvc.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://picksandshovelsvc.com/*"
-  to = "https://www.picksandshovelsvc.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://www.picksandshovelsvc.com/*"
-  to = "https://www.picksandshovelsvc.com/:splat"
-  status = 301
-  force = true
