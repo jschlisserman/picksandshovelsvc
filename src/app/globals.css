@@ -1,0 +1,247 @@
+@import "tailwindcss";
+@import "@fontsource/commit-mono/400.css";
+@import "@fontsource/commit-mono/500.css";
+@import "@fontsource/commit-mono/700.css";
+
+:root {
+  /* Mastra kitchen-sink surface tokens */
+  --color-ds-surface-bg: #020202;
+  --color-ds-surface-antigrid: #0d0d0d;
+  --color-ds-surface-elevation-sm: #1a1a1a;
+  --color-ds-surface-elevation-lg: #141414;
+  --color-ds-surface-hover: #262626;
+
+  --color-ds-main-white: #f0f0f0;
+  --color-ds-special-gray: #cccccc;
+  --color-ds-main-gray: #939393;
+  --color-ds-dark-gray: #424242;
+
+  --color-ds-border-antigrid: #141414;
+  --color-ds-border-elevation: #1a1a1a;
+
+  --color-ds-green: #7aff78;
+  --color-ds-blue: #6ccdfb;
+  --color-ds-orange: #fdac53;
+
+  --spacing-ds-antigrid: 18px;
+  --spacing-ds-md: 28px;
+  --spacing-ds-lg: 38px;
+  --spacing-ds-layout-content: 1120px;
+
+  --radius-ds-elevation: 16px;
+  --font-commit-mono: "Commit Mono", ui-monospace, monospace;
+}
+
+@theme inline {
+  --color-bg: var(--color-ds-surface-bg);
+  --color-antigrid: var(--color-ds-surface-antigrid);
+  --color-elevation: var(--color-ds-surface-elevation-sm);
+  --color-elevation-lg: var(--color-ds-surface-elevation-lg);
+  --color-hover: var(--color-ds-surface-hover);
+  --color-ink: var(--color-ds-main-white);
+  --color-ink-soft: var(--color-ds-special-gray);
+  --color-ink-muted: var(--color-ds-main-gray);
+  --color-ink-faint: var(--color-ds-dark-gray);
+  --color-border: var(--color-ds-border-antigrid);
+  --color-border-elev: var(--color-ds-border-elevation);
+  --color-accent: var(--color-ds-green);
+  --color-accent-blue: var(--color-ds-blue);
+  --color-accent-orange: var(--color-ds-orange);
+
+  --font-sans: var(--font-display);
+  --font-mono: var(--font-commit-mono);
+
+  --radius-elevation: var(--radius-ds-elevation);
+  --spacing-antigrid: var(--spacing-ds-antigrid);
+  --spacing-content: var(--spacing-ds-layout-content);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --spacing-ds-antigrid: 28px;
+    --radius-ds-elevation: 21px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ds-surface-bg);
+  color: var(--color-ds-main-white);
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.36;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-ds-green) 35%, transparent);
+  color: var(--color-ds-main-white);
+}
+
+/* Typography scale (Mastra kitchen-sink) */
+.text-headline-3xl {
+  font-size: clamp(2.25rem, 5vw, 4.25rem);
+  line-height: 1.1;
+  font-weight: 520;
+  font-stretch: 112%;
+  letter-spacing: -0.03em;
+}
+
+.text-headline-2xl {
+  font-size: clamp(1.875rem, 4vw, 3.375rem);
+  line-height: 1.1;
+  font-weight: 520;
+  font-stretch: 112%;
+  letter-spacing: -0.025em;
+}
+
+.text-headline-xl {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.1;
+  font-weight: 520;
+  font-stretch: 112%;
+  letter-spacing: -0.02em;
+}
+
+.text-headline-lg {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  line-height: 1.1;
+  font-weight: 520;
+  font-stretch: 112%;
+  letter-spacing: -0.02em;
+}
+
+.text-headline-md {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  line-height: 1.1;
+  font-weight: 520;
+  font-stretch: 112%;
+}
+
+.text-headline-sm {
+  font-size: clamp(1.125rem, 1.5vw, 1.25rem);
+  line-height: 1.1;
+  font-weight: 520;
+}
+
+.text-body-lg {
+  font-size: 1.375rem;
+  line-height: 1.36;
+  font-weight: 400;
+}
+
+.text-body {
+  font-size: 1.0625rem;
+  line-height: 1.36;
+  font-weight: 400;
+}
+
+.text-body-sm {
+  font-size: 0.90625rem;
+  line-height: 1.36;
+  font-weight: 400;
+}
+
+.content-column {
+  width: 100%;
+  max-width: var(--spacing-ds-layout-content);
+  margin-inline: auto;
+  padding-inline: var(--spacing-ds-antigrid);
+}
+
+.anti-grid {
+  display: grid;
+  gap: var(--spacing-ds-antigrid);
+}
+
+.box {
+  background: var(--color-ds-surface-antigrid);
+  border: 1px solid var(--color-ds-border-antigrid);
+  border-radius: var(--radius-ds-elevation);
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.box:hover {
+  background: color-mix(in oklab, var(--color-ds-surface-hover) 55%, var(--color-ds-surface-antigrid));
+  border-color: color-mix(in oklab, var(--color-ds-border-elevation) 80%, #3a3a3a);
+}
+
+.mono-label {
+  font-family: var(--font-commit-mono), ui-monospace, monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ds-main-gray);
+}
+
+/* Atmosphere: soft grid + vignette, not flat black */
+.site-atmosphere {
+  background-color: var(--color-ds-surface-bg);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(122, 255, 120, 0.07), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 20%, rgba(108, 205, 251, 0.04), transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size:
+    auto,
+    auto,
+    48px 48px,
+    48px 48px;
+  background-attachment: fixed;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-rise {
+  animation: rise-in 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade {
+  animation: fade-in 900ms ease both;
+}
+
+.delay-1 {
+  animation-delay: 80ms;
+}
+.delay-2 {
+  animation-delay: 160ms;
+}
+.delay-3 {
+  animation-delay: 240ms;
+}
+.delay-4 {
+  animation-delay: 320ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-rise,
+  .animate-fade {
+    animation: none;
+  }
+}
