@@ -89,7 +89,7 @@ export const portfolio = [
     href: "https://concrete.xyz/",
   },
   {
-    name: "Skip",
+    name: "Skip (acq)",
     stage: "Seed",
     stealth: false,
     logo: "/portfolio/skip.png",
