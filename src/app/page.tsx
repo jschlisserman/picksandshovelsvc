@@ -1,5 +1,6 @@
 import Image from "next/image";
 import {
+  about,
   areasOfInterest,
   backedBy,
   firm,
@@ -39,6 +40,7 @@ export default function Home() {
             ["Sourcing", "#sourcing"],
             ["Portfolio", "#portfolio"],
             ["Interest", "#interest"],
+            ["About", "#about"],
           ].map(([label, href]) => (
             <a
               key={href}
@@ -320,6 +322,45 @@ export default function Home() {
               <p className="text-headline-sm text-ink-muted">And more…</p>
             </li>
           </ul>
+        </section>
+
+        {/* About */}
+        <section
+          id="about"
+          className="content-column scroll-mt-8 py-10 sm:py-14"
+          aria-labelledby="about-heading"
+        >
+          <div className="mb-8">
+            <p className="mono-label mb-3">Operator-Investor</p>
+            <h2 id="about-heading" className="text-headline-xl text-ink">
+              About
+            </h2>
+          </div>
+
+          <div className="box divide-y divide-[var(--color-ds-border-antigrid)] overflow-hidden p-0">
+            <div className="flex items-center gap-4 p-5 sm:p-6">
+              <Image
+                src={about.portrait}
+                alt={about.name}
+                width={112}
+                height={112}
+                className="size-24 shrink-0 rounded-lg object-cover sm:size-28"
+              />
+              <div className="min-w-0">
+                <h3 className="text-headline-md text-ink">{about.name}</h3>
+                <p className="text-body mt-1 text-ink-muted">{about.title}</p>
+              </div>
+            </div>
+            {about.timeline.map((entry) => (
+              <article key={entry.label} className="p-5 sm:p-6">
+                <p className="mono-label mb-3 text-accent">{entry.label}</p>
+                <p className="text-body text-ink-soft">{entry.body}</p>
+              </article>
+            ))}
+            <div className="bg-elevation p-5 sm:p-6">
+              <p className="text-body text-ink">{about.summary}</p>
+            </div>
+          </div>
         </section>
 
         {/* Closing CTA */}
