@@ -15,6 +15,7 @@ export const backedBy = [
   { name: "Mark Ghermezian", role: "MXV", href: "https://www.linkedin.com/in/markgher/" },
   { name: "Lan Xuezhao", role: "Basis Set Ventures", href: "https://www.linkedin.com/in/lanxuezhao/" },
   { name: "Bobby Lo", role: "Vurb", href: "https://www.linkedin.com/in/bobbylo/" },
+  { name: "Ricky Horwitz", role: "Exponential", href: "https://www.linkedin.com/in/rickyhorwitz/" },
   { name: "Brendan Baker", role: "Rackhouse VC", href: "https://www.linkedin.com/in/brendanbaker/" },
   { name: "Armaan Ali", role: "Seifdune", href: "https://www.linkedin.com/in/armaan-syed-ali-808a2072/" },
   { name: "Esteban Reyes", role: "Zenda VC", href: "https://www.linkedin.com/in/reyesesteban/" },
