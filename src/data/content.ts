@@ -16,6 +16,19 @@ export const backedBy = [
   { name: "Brendan Baker", role: "Rackhouse VC", href: "https://www.linkedin.com/in/brendanbaker/" },
   { name: "Armaan Ali", role: "Seifdune", href: "https://www.linkedin.com/in/armaan-syed-ali-808a2072/" },
   { name: "Esteban Reyes", role: "Zenda VC", href: "https://www.linkedin.com/in/reyesesteban/" },
+  { name: "Tiger Global", role: "Fund", href: "https://www.tigerglobal.com/" },
+  { name: "Marc Bhargava", role: "General Catalyst", href: "https://www.linkedin.com/in/marc-bhargava-55030311/" },
+  { name: "Josh Kuzon", role: "Reciprocal Ventures", href: "https://www.linkedin.com/in/josh-kuzon-78035a5/" },
+  { name: "Evan Fisher", role: "Portal VC", href: "https://www.linkedin.com/in/evanfisher1/" },
+  { name: "Max Abram", role: "Scale VP", href: "https://www.linkedin.com/in/maxwellabram/" },
+  { name: "Nichole Wischoff", role: "Wischoff Ventures", href: "https://www.linkedin.com/in/nicholewischoff/" },
+  { name: "Brexton Pham", role: "Cantor Fitzgerald", href: "https://www.linkedin.com/in/brextonpham/" },
+  { name: "Julia Lipton", role: "Awesome People VC", href: "https://www.linkedin.com/in/julialipton/" },
+  { name: "Ariana Thacker", role: "MoldCo", href: "https://www.linkedin.com/in/arianadthacker/" },
+  { name: "Curtis Cheng", role: "Rubik Ventures", href: "https://www.linkedin.com/in/curtishcheng/" },
+  { name: "Jessica Zaltulove", role: "Hannah Grey", href: "https://www.linkedin.com/in/jessicapeltz/" },
+  { name: "Luke Girgis", role: "Rolling Stone (AU)", href: "https://www.linkedin.com/in/lukegirgis/" },
+  { name: "Tasti Zakarie", role: "Bridge", href: "https://www.linkedin.com/in/tasti/" },
 ] as const;
 
 export const sourcing = [
