@@ -14,7 +14,7 @@ export const backedBy = [
   { name: "Sumeet Gajri", role: "Original Capital", href: "https://www.linkedin.com/in/sumeetgajri/" },
   { name: "Mark Ghermezian", role: "MXV", href: "https://www.linkedin.com/in/markgher/" },
   { name: "Brendan Baker", role: "Rackhouse VC", href: "https://www.linkedin.com/in/brendanbaker/" },
-  { name: "Jessica Zaltulove", role: "Hannah Grey", href: "https://www.linkedin.com/in/jessicapeltz/" },
+  { name: "Armaan Ali", role: "Seifdune", href: "https://www.linkedin.com/in/armaan-syed-ali-808a2072/" },
   { name: "Esteban Reyes", role: "Zenda VC", href: "https://www.linkedin.com/in/reyesesteban/" },
 ] as const;
 
