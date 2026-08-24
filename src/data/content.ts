@@ -13,6 +13,8 @@ export const backedBy = [
   { name: "Varun Gupta", role: "Caffeinated Capital", href: "https://www.linkedin.com/in/varun-gupta-1b131264/" },
   { name: "Sumeet Gajri", role: "Original Capital", href: "https://www.linkedin.com/in/sumeetgajri/" },
   { name: "Mark Ghermezian", role: "MXV", href: "https://www.linkedin.com/in/markgher/" },
+  { name: "Lan Xuezhao", role: "Basis Set Ventures", href: "https://www.linkedin.com/in/lanxuezhao/" },
+  { name: "Bobby Lo", role: "Vurb", href: "https://www.linkedin.com/in/bobbylo/" },
   { name: "Brendan Baker", role: "Rackhouse VC", href: "https://www.linkedin.com/in/brendanbaker/" },
   { name: "Armaan Ali", role: "Seifdune", href: "https://www.linkedin.com/in/armaan-syed-ali-808a2072/" },
   { name: "Esteban Reyes", role: "Zenda VC", href: "https://www.linkedin.com/in/reyesesteban/" },
