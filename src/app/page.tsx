@@ -125,10 +125,10 @@ export default function Home() {
                     {initials(person.name)}
                   </span>
                   <div className="min-w-0">
-                    <p className="text-body-sm truncate font-medium text-ink">
+                    <p className="text-body-sm font-medium leading-snug text-ink">
                       {person.name}
                     </p>
-                    <p className="text-body-sm truncate text-ink-muted">
+                    <p className="text-body-sm leading-snug text-ink-muted">
                       {person.role}
                     </p>
                   </div>
@@ -142,26 +142,26 @@ export default function Home() {
                       href={person.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="box flex items-center gap-3 p-4 no-underline sm:p-5"
+                      className="box flex items-start gap-3 p-4 no-underline sm:p-5"
                     >
                       {inner}
                     </a>
                   ) : (
-                    <div className="box flex items-center gap-3 p-4 sm:p-5">
+                    <div className="box flex items-start gap-3 p-4 sm:p-5">
                       {inner}
                     </div>
                   )}
                 </li>
               );
             })}
-            <li className="box flex items-center gap-3 border-dashed p-4 text-ink-muted sm:p-5">
+            <li className="box flex items-start gap-3 border-dashed p-4 text-ink-muted sm:p-5">
               <span
                 aria-hidden
                 className="grid size-11 shrink-0 place-items-center rounded-full border border-dashed border-ink-faint font-mono text-sm"
               >
                 +
               </span>
-              <p className="text-body-sm">and others</p>
+              <p className="text-body-sm leading-snug">and others</p>
             </li>
           </ul>
         </section>

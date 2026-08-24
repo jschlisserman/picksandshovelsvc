@@ -7,15 +7,15 @@ export const firm = {
 export const backedBy = [
   {
     name: "Ray Tonsing",
-    role: "GP, Caffeinated Capital",
+    role: "Caffeinated Capital",
     href: "https://www.linkedin.com/in/tonsing/",
   },
-  { name: "Varun Gupta", role: "Partner, Caffeinated Capital", href: "https://www.linkedin.com/in/varun-gupta-1b131264/" },
-  { name: "Sumeet Gajri", role: "GP, Original Capital", href: "https://www.linkedin.com/in/sumeetgajri/" },
-  { name: "Mark Ghermezian", role: "GP, MXV", href: "https://www.linkedin.com/in/markgher/" },
-  { name: "Brendan Baker", role: "GP, Rackhouse VC", href: "https://www.linkedin.com/in/brendanbaker/" },
-  { name: "Jessica Peltz Zaltulove", role: "Hannah Grey", href: "https://www.linkedin.com/in/jessicapeltz/" },
-  { name: "Esteban Reyes", role: "GP, Zenda VC", href: "https://www.linkedin.com/in/reyesesteban/" },
+  { name: "Varun Gupta", role: "Caffeinated Capital", href: "https://www.linkedin.com/in/varun-gupta-1b131264/" },
+  { name: "Sumeet Gajri", role: "Original Capital", href: "https://www.linkedin.com/in/sumeetgajri/" },
+  { name: "Mark Ghermezian", role: "MXV", href: "https://www.linkedin.com/in/markgher/" },
+  { name: "Brendan Baker", role: "Rackhouse VC", href: "https://www.linkedin.com/in/brendanbaker/" },
+  { name: "Jessica Zaltulove", role: "Hannah Grey", href: "https://www.linkedin.com/in/jessicapeltz/" },
+  { name: "Esteban Reyes", role: "Zenda VC", href: "https://www.linkedin.com/in/reyesesteban/" },
 ] as const;
 
 export const sourcing = [
