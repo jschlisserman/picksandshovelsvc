@@ -133,6 +133,8 @@ export const areasOfInterest = {
     "AI-Enabled Services",
     "AI-Enabled CPGs",
     "AI-Enabled Marketplaces for Public Sector",
+    "Computer Infrastructure",
+    "Consumer AI",
   ],
 } as const;
 
