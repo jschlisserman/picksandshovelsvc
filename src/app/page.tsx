@@ -67,7 +67,7 @@ export default function Home() {
 
       <main id="top" className="flex-1 pb-20 sm:pb-28">
         {/* Hero — brand-first, one composition */}
-        <section className="content-column relative min-h-[72vh] overflow-hidden pt-10 pb-16 sm:min-h-[78vh] sm:pt-16 sm:pb-24">
+        <section className="content-column relative overflow-hidden pt-10 pb-10 sm:pt-14 sm:pb-12">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-full"
@@ -102,7 +102,7 @@ export default function Home() {
         </section>
 
         {/* Backed by */}
-        <section className="content-column py-10 sm:py-14" aria-labelledby="backed-by">
+        <section className="content-column py-8 sm:py-10" aria-labelledby="backed-by">
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="mono-label mb-3">Network</p>

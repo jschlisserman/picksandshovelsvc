@@ -129,7 +129,7 @@ export const portfolio = [
 export const areasOfInterest = {
   asOf: "August 24, 2026",
   items: [
-    "Thoughtful Agentic Harnesses",
+    "Agentic Harnesses",
     "AI-Enabled Services",
     "AI-Enabled CPGs",
     "AI-Enabled Marketplaces for Public Sector",
