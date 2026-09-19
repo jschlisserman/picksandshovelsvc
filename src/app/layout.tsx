@@ -10,8 +10,7 @@ const instrumentSans = Instrument_Sans({
 
 export const metadata: Metadata = {
   title: "Picks and Shovels",
-  description:
-    "Investing in non-consensus companies before they become consensus.",
+  description: "Generalist Investor",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

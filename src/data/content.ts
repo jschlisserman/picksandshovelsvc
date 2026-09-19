@@ -1,6 +1,6 @@
 export const firm = {
   name: "Picks and Shovels",
-  tagline: "Investing in non-consensus companies before they become consensus",
+  tagline: "Generalist Investor",
   email: "josh@picksandshovelsvc.com",
 } as const;
 
@@ -21,6 +21,8 @@ export const backedBy = [
   { name: "Esteban Reyes", role: "Zenda VC", href: "https://www.linkedin.com/in/reyesesteban/" },
   { name: "Tiger Global", role: "Fund", href: "https://www.tigerglobal.com/" },
   { name: "Marc Bhargava", role: "General Catalyst", href: "https://www.linkedin.com/in/marc-bhargava-55030311/" },
+  { name: "Mike Annunziata", role: "Also Capital", href: "https://www.linkedin.com/in/mike-annunziata-12853bb/" },
+  { name: "Ellen Chisa", role: "Boldstart Capital", href: "https://www.linkedin.com/in/ellenchisa/" },
   { name: "Josh Kuzon", role: "Reciprocal Ventures", href: "https://www.linkedin.com/in/josh-kuzon-78035a5/" },
   { name: "Evan Fisher", role: "Portal VC", href: "https://www.linkedin.com/in/evanfisher1/" },
   { name: "Max Abram", role: "Scale VP", href: "https://www.linkedin.com/in/maxwellabram/" },
@@ -135,6 +137,7 @@ export const areasOfInterest = {
     "AI-Enabled Marketplaces",
     "Computer Infrastructure",
     "Multiplayer Consumer AI",
+    "AI for Public Safety & Government",
   ],
 } as const;
 
