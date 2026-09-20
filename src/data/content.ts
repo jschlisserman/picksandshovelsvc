@@ -22,7 +22,7 @@ export const backedBy = [
   { name: "Tiger Global", role: "Fund", href: "https://www.tigerglobal.com/" },
   { name: "Marc Bhargava", role: "General Catalyst", href: "https://www.linkedin.com/in/marc-bhargava-55030311/" },
   { name: "Mike Annunziata", role: "Also Capital", href: "https://www.linkedin.com/in/mike-annunziata-12853bb/" },
-  { name: "Ellen Chisa", role: "Boldstart Capital", href: "https://www.linkedin.com/in/ellenchisa/" },
+  { name: "Ellen Chisa", role: "Boldstart Ventures", href: "https://www.linkedin.com/in/ellenchisa/" },
   { name: "Josh Kuzon", role: "Reciprocal Ventures", href: "https://www.linkedin.com/in/josh-kuzon-78035a5/" },
   { name: "Evan Fisher", role: "Portal VC", href: "https://www.linkedin.com/in/evanfisher1/" },
   { name: "Max Abram", role: "Scale VP", href: "https://www.linkedin.com/in/maxwellabram/" },
