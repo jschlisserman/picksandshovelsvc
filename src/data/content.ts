@@ -115,6 +115,13 @@ export const portfolio = [
     href: "https://www.flux.ai/p",
   },
   {
+    name: "Paralign Labs",
+    stage: "Seed",
+    stealth: false,
+    logo: "/portfolio/paralign-labs.png",
+    href: "https://paralignlabs.com/",
+  },
+  {
     name: "Default",
     stage: "Seed",
     stealth: true,
