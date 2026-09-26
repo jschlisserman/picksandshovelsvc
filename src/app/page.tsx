@@ -308,20 +308,60 @@ export default function Home() {
             </p>
           </div>
 
-          <ul className="anti-grid sm:grid-cols-2">
-            {areasOfInterest.items.map((item, index) => (
-              <li key={item} className="box flex items-start gap-4 p-5 sm:p-6">
-                <span className="font-mono text-body-sm text-accent">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <p className="text-headline-sm text-ink">{item}</p>
-              </li>
-            ))}
-            <li className="box flex items-start gap-4 border-dashed p-5 sm:col-span-2 sm:p-6">
-              <span className="font-mono text-body-sm text-ink-muted">··</span>
-              <p className="text-headline-sm text-ink-muted">And more…</p>
-            </li>
-          </ul>
+          <div className="anti-grid">
+            <div>
+              <h3 className="text-headline-md mb-4 text-ink">
+                1. Themes of Interest
+              </h3>
+              <ul className="anti-grid sm:grid-cols-2">
+                {areasOfInterest.themes.map((item, index) => (
+                  <li
+                    key={item}
+                    className="box flex items-start gap-4 p-5 sm:p-6"
+                  >
+                    <span className="font-mono text-body-sm text-accent">
+                      {String.fromCharCode(65 + index)}
+                    </span>
+                    <p className="text-headline-sm text-ink">{item}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-headline-md mb-4 text-ink">
+                2. Request For Startups
+              </h3>
+              <ul className="anti-grid sm:grid-cols-2">
+                {areasOfInterest.requestForStartups.map((item, index) => {
+                  const isComingSoon = item === "More coming soon";
+                  return (
+                    <li
+                      key={item}
+                      className={`box flex items-start gap-4 p-5 sm:p-6 ${
+                        isComingSoon ? "border-dashed" : ""
+                      }`}
+                    >
+                      <span
+                        className={`font-mono text-body-sm ${
+                          isComingSoon ? "text-ink-muted" : "text-accent"
+                        }`}
+                      >
+                        {String.fromCharCode(65 + index)}
+                      </span>
+                      <p
+                        className={`text-headline-sm ${
+                          isComingSoon ? "text-ink-muted" : "text-ink"
+                        }`}
+                      >
+                        {item}
+                      </p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
         </section>
 
         {/* About */}

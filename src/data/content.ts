@@ -129,15 +129,18 @@ export const portfolio = [
 ] as const;
 
 export const areasOfInterest = {
-  asOf: "August 24, 2026",
-  items: [
-    "Agentic Harnesses",
+  asOf: "September 26th, 2026",
+  themes: [
     "AI-Enabled Services",
     "AI-Enabled CPGs",
-    "AI-Enabled Marketplaces",
     "Computer Infrastructure",
-    "Multiplayer Consumer AI",
-    "AI for Public Safety & Government",
+    "Domain-Specific Agentic Harnesses",
+  ],
+  requestForStartups: [
+    "Contraband Intelligence for Corrections",
+    "AI Native Services for Outdoor Hospitality",
+    "Github for GTM",
+    "More coming soon",
   ],
 } as const;
 
