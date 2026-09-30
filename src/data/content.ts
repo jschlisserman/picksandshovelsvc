@@ -128,6 +128,13 @@ export const portfolio = [
     logo: "/portfolio/default.png",
     href: "https://www.default.com/",
   },
+  {
+    name: "GitCafe",
+    stage: "Seed",
+    stealth: true,
+    logo: "/portfolio/gitcafe.png",
+    href: "https://www.git.cafe",
+  },
   { name: "AIHG", stage: "Seed", stealth: true, logo: "/portfolio/aihg.png", href: "https://aihg.com/" },
   { name: "Rivet", stage: "Pre-Seed", stealth: true, logo: "/portfolio/rivet.png", href: "https://www.rivet.tax/" },
   { name: "Silo Markets", stage: "Pre-Seed", stealth: true, logo: "/portfolio/silo-markets.png", href: "https://www.silomarkets.com/" },
