@@ -142,22 +142,6 @@ export const portfolio = [
   { name: "Aviron", stage: "Pre-Seed", stealth: true, logo: "/portfolio/aviron.png", href: "https://www.avironactive.com/" },
 ] as const;
 
-export const areasOfInterest = {
-  asOf: "September 26th, 2026",
-  themes: [
-    "AI-Enabled Services",
-    "AI-Enabled CPGs",
-    "Computer Infrastructure",
-    "Domain-Specific Agentic Harnesses",
-  ],
-  requestForStartups: [
-    "Contraband Intelligence for Corrections",
-    "AI Native Services for Outdoor Hospitality",
-    "Github for GTM",
-    "More coming soon",
-  ],
-} as const;
-
 export const about = {
   name: "Joshua Schlisserman",
   title: "GP, Operator-Investor",

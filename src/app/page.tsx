@@ -1,7 +1,6 @@
 import Image from "next/image";
 import {
   about,
-  areasOfInterest,
   backedBy,
   firm,
   portfolio,
@@ -39,7 +38,6 @@ export default function Home() {
           {[
             ["Sourcing", "#sourcing"],
             ["Portfolio", "#portfolio"],
-            ["Interest", "#interest"],
             ["About", "#about"],
           ].map(([label, href]) => (
             <a
@@ -290,78 +288,6 @@ export default function Home() {
               );
             })}
           </ul>
-        </section>
-
-        {/* Areas of interest */}
-        <section
-          id="interest"
-          className="content-column scroll-mt-8 py-10 sm:py-14"
-          aria-labelledby="interest-heading"
-        >
-          <div className="mb-8">
-            <p className="mono-label mb-3">Thesis</p>
-            <h2 id="interest-heading" className="text-headline-xl text-ink">
-              Current areas of interest
-            </h2>
-            <p className="text-body mt-3 text-ink-muted">
-              As of {areasOfInterest.asOf}
-            </p>
-          </div>
-
-          <div className="anti-grid">
-            <div>
-              <h3 className="text-headline-md mb-4 text-ink">
-                1. Themes of Interest
-              </h3>
-              <ul className="anti-grid sm:grid-cols-2">
-                {areasOfInterest.themes.map((item, index) => (
-                  <li
-                    key={item}
-                    className="box flex items-start gap-4 p-5 sm:p-6"
-                  >
-                    <span className="font-mono text-body-sm text-accent">
-                      {String.fromCharCode(65 + index)}
-                    </span>
-                    <p className="text-headline-sm text-ink">{item}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-headline-md mb-4 text-ink">
-                2. Request For Startups
-              </h3>
-              <ul className="anti-grid sm:grid-cols-2">
-                {areasOfInterest.requestForStartups.map((item, index) => {
-                  const isComingSoon = item === "More coming soon";
-                  return (
-                    <li
-                      key={item}
-                      className={`box flex items-start gap-4 p-5 sm:p-6 ${
-                        isComingSoon ? "border-dashed" : ""
-                      }`}
-                    >
-                      <span
-                        className={`font-mono text-body-sm ${
-                          isComingSoon ? "text-ink-muted" : "text-accent"
-                        }`}
-                      >
-                        {String.fromCharCode(65 + index)}
-                      </span>
-                      <p
-                        className={`text-headline-sm ${
-                          isComingSoon ? "text-ink-muted" : "text-ink"
-                        }`}
-                      >
-                        {item}
-                      </p>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          </div>
         </section>
 
         {/* About */}
