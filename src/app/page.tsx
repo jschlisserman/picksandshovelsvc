@@ -4,7 +4,6 @@ import {
   backedBy,
   firm,
   portfolio,
-  sourcing,
 } from "@/data/content";
 
 function initials(name: string) {
@@ -36,7 +35,6 @@ export default function Home() {
         </a>
         <nav className="hidden items-center gap-6 sm:flex">
           {[
-            ["Sourcing", "#sourcing"],
             ["Portfolio", "#portfolio"],
             ["About", "#about"],
           ].map(([label, href]) => (
@@ -91,10 +89,10 @@ export default function Home() {
               Reach out
             </a>
             <a
-              href="#sourcing"
+              href="#portfolio"
               className="inline-flex items-center rounded-full border border-border px-5 py-2.5 text-body-sm text-ink-soft no-underline transition-colors hover:border-ink-faint hover:text-ink"
             >
-              Sourcing
+              Portfolio
             </a>
           </div>
         </section>
@@ -164,53 +162,6 @@ export default function Home() {
               <p className="text-body-sm leading-snug">and others</p>
             </li>
           </ul>
-        </section>
-
-        {/* Sourcing */}
-        <section
-          id="sourcing"
-          className="content-column scroll-mt-8 py-10 sm:py-14"
-          aria-labelledby="sourcing-heading"
-        >
-          <div className="mb-8">
-            <p className="mono-label mb-3">Process</p>
-            <h2 id="sourcing-heading" className="text-headline-xl text-ink">
-              Sourcing
-            </h2>
-            <p className="text-body mt-3 max-w-xl text-ink-muted">
-              Markets first, then founders.
-            </p>
-          </div>
-
-          <ol className="anti-grid">
-            {sourcing.map((step, index) => (
-              <li
-                key={step.title}
-                className="box grid gap-4 p-5 sm:grid-cols-[auto_1fr] sm:gap-8 sm:p-7"
-              >
-                <span className="font-mono text-headline-lg text-accent/90">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <h3 className="text-headline-md text-ink">{step.title}</h3>
-                  <ul className="mt-4 space-y-2">
-                    {step.points.map((point) => (
-                      <li
-                        key={point}
-                        className="text-body flex gap-3 text-ink-soft"
-                      >
-                        <span
-                          aria-hidden
-                          className="mt-2 size-1.5 shrink-0 rounded-full bg-accent"
-                        />
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
-            ))}
-          </ol>
         </section>
 
         {/* Portfolio */}

@@ -17,7 +17,6 @@ export const backedBy = [
   { name: "Ricky Horwitz", role: "Exponential", href: "https://www.linkedin.com/in/rickyhorwitz/" },
   { name: "Brendan Baker", role: "Rackhouse VC", href: "https://www.linkedin.com/in/brendanbaker/" },
   { name: "Armaan Ali", role: "Seifdune", href: "https://www.linkedin.com/in/armaan-syed-ali-808a2072/" },
-  { name: "Tiger Global", role: "Fund", href: "https://www.tigerglobal.com/" },
   { name: "Marc Bhargava", role: "General Catalyst", href: "https://www.linkedin.com/in/marc-bhargava-55030311/" },
   { name: "Mike Annunziata", role: "Also Capital", href: "https://www.linkedin.com/in/mike-annunziata-12853bb/" },
   { name: "Ellen Chisa", role: "Boldstart Ventures", href: "https://www.linkedin.com/in/ellenchisa/" },
@@ -26,27 +25,6 @@ export const backedBy = [
   { name: "Ariana Thacker", role: "MoldCo", href: "https://www.linkedin.com/in/arianadthacker/" },
   { name: "Luke Girgis", role: "Rolling Stone (AU)", href: "https://www.linkedin.com/in/lukegirgis/" },
   { name: "TX Zhuo", role: "Fika VC", href: "https://www.linkedin.com/in/tianxiangzhuo/" },
-] as const;
-
-export const sourcing = [
-  {
-    title: "Meet companies because of the market",
-    points: [
-      "No “arms race” deals — avoid commoditized spaces",
-      "Primarily areas investors aren’t focused on right now",
-    ],
-  },
-  {
-    title: "Invest in companies because of the founder",
-    points: [
-      "Truly domain experts",
-      "Don’t need hands-on help",
-    ],
-  },
-  {
-    title: "Invest before there’s a lead investor",
-    points: ["Aim to introduce the lead investor"],
-  },
 ] as const;
 
 export const portfolio = [
