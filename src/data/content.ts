@@ -260,23 +260,48 @@ export const portfolioGroups = [
 ] as const;
 
 export const about = {
-  name: "Joshua Schlisserman",
-  title: "GP, Operator-Investor",
-  portrait: "/about/portrait.png",
   summary:
-    "I specialize in taking companies from $0 to $10M+ in ARR, finding problem-market fit, and intentionally scaling an organization. I plan to share those learnings with the next generation of picks-and-shovels founders.",
-  timeline: [
+    "We specialize in taking companies from $0 to $10M+ in ARR, finding problem-market fit, and intentionally scaling an organization. We plan to share those learnings with the next generation of picks-and-shovels founders.",
+  people: [
     {
-      label: "Now — Mastra (Port Co)",
-      body: "Chief of Staff at Mastra, the leading TypeScript framework for building AI agents, backed by Spark Capital, Gradient VC, SV Angel and Basecase VC. My role centers on sales, GTM, and customer support/success.",
+      name: "Joshua Schlisserman",
+      title: "GP, Operator-Investor",
+      portrait: "/about/portrait.png",
+      href: "https://www.linkedin.com/in/joshua-schlisserman/",
+      timeline: [
+        {
+          label: "Now — Mastra (Port Co)",
+          body: "Chief of Staff at Mastra, the leading TypeScript framework for building AI agents, backed by Spark Capital, Gradient VC, SV Angel and Basecase VC. My role centers on sales, GTM, and customer support/success.",
+        },
+        {
+          label: "Before — Series (Employee #1)",
+          body: "Chief of Staff at Series, which builds tools for institutional allocators. I helped scale to our first $1B in AUM, ran all enterprise sales, and built the GTM organization. Backed by 776, Fin VC, Caffeinated Capital and Basis Set Ventures.",
+        },
+        {
+          label: "Before — Preside (Co-Founder)",
+          body: "Workflow automation for public safety and government, backed by Caffeinated Capital, Basecase VC, Banter Capital and Basis Set Ventures. We never found product-market fit — but I learned how to invest in the next generation of public-sector founders.",
+        },
+      ],
     },
     {
-      label: "Before — Series (Employee #1)",
-      body: "Chief of Staff at Series, which builds tools for institutional allocators. I helped scale to our first $1B in AUM, ran all enterprise sales, and built the GTM organization. Backed by 776, Fin VC, Caffeinated Capital and Basis Set Ventures.",
-    },
-    {
-      label: "Before — Preside (Co-Founder)",
-      body: "Workflow automation for public safety and government, backed by Caffeinated Capital, Basecase VC, Banter Capital and Basis Set Ventures. We never found product-market fit — but I learned how to invest in the next generation of public-sector founders.",
+      name: "Janet Lee",
+      title: "Venture Partner, Operator-Investor",
+      portrait: "/about/janet-lee.png",
+      href: "https://www.linkedin.com/in/jayleejanet/",
+      timeline: [
+        {
+          label: "Now — Daydream (Port Co)",
+          body: "Head of GTM at Daydream, a full-stack organic search partner handling strategy and execution across SEO and AI search, including keyword research, content, technical SEO, authority building, and AI citation optimization.",
+        },
+        {
+          label: "Before — EarnIn (EIR)",
+          body: "Entrepreneur in Residence at EarnIn, which provides tools like credit monitoring, automated savings accounts, and low-balance protection. All with no interest, no credit checks, and no mandatory fees.",
+        },
+        {
+          label: "Before — Series (Head of Operations)",
+          body: "Head of Operations at Series, which builds tools for institutional allocators. Oversaw and built our Business Development, Customer Support/Success, and Ops Functions. Backed by 776, Fin VC, Caffeinated Capital and Basis Set Ventures.",
+        },
+      ],
     },
   ],
 } as const;

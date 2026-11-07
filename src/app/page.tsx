@@ -262,31 +262,55 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="panel-dark divide-y divide-clay/15 overflow-hidden p-0">
-              <div className="flex items-center gap-4 p-5 sm:p-6">
-                <Image
-                  src={about.portrait}
-                  alt={about.name}
-                  width={112}
-                  height={112}
-                  className="size-24 shrink-0 rounded-lg object-cover sm:size-28"
-                />
-                <div className="min-w-0">
-                  <h3 className="text-headline-md text-ink-on-dark">
-                    {about.name}
-                  </h3>
-                  <p className="text-body mt-1 text-ink-on-dark-muted">
-                    {about.title}
-                  </p>
-                </div>
-              </div>
-              <div className="bg-ore/50 p-5 sm:p-6">
-                <p className="text-body text-ink-on-dark">{about.summary}</p>
-              </div>
-              {about.timeline.map((entry) => (
-                <article key={entry.label} className="p-5 sm:p-6">
-                  <p className="mono-label mb-3 text-rust">{entry.label}</p>
-                  <p className="text-body text-ink-on-dark-soft">{entry.body}</p>
+            <div className="panel-dark mb-8 p-5 sm:p-6">
+              <p className="text-body text-ink-on-dark">{about.summary}</p>
+            </div>
+
+            <div className="grid gap-[var(--spacing-gutter)] lg:grid-cols-2">
+              {about.people.map((person) => (
+                <article
+                  key={person.name}
+                  className="panel-dark divide-y divide-clay/15 overflow-hidden p-0"
+                >
+                  <div className="flex items-center gap-4 p-5 sm:p-6">
+                    <a
+                      href={person.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="shrink-0 no-underline"
+                    >
+                      <Image
+                        src={person.portrait}
+                        alt={person.name}
+                        width={112}
+                        height={112}
+                        className="size-24 rounded-lg object-cover transition-opacity hover:opacity-90 sm:size-28"
+                      />
+                    </a>
+                    <div className="min-w-0">
+                      <h3 className="text-headline-md text-ink-on-dark">
+                        <a
+                          href={person.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-ink-on-dark no-underline transition-colors hover:text-rust"
+                        >
+                          {person.name}
+                        </a>
+                      </h3>
+                      <p className="text-body mt-1 text-ink-on-dark-muted">
+                        {person.title}
+                      </p>
+                    </div>
+                  </div>
+                  {person.timeline.map((entry) => (
+                    <div key={entry.label} className="p-5 sm:p-6">
+                      <p className="mono-label mb-3 text-rust">{entry.label}</p>
+                      <p className="text-body text-ink-on-dark-soft">
+                        {entry.body}
+                      </p>
+                    </div>
+                  ))}
                 </article>
               ))}
             </div>
