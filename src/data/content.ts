@@ -274,12 +274,12 @@ export const about = {
           body: "Chief of Staff at Mastra, the leading TypeScript framework for building AI agents, backed by Spark Capital, Gradient VC, SV Angel and Basecase VC. My role centers on sales, GTM, and customer support/success.",
         },
         {
-          label: "Before — Series (Employee #1)",
-          body: "Chief of Staff at Series, which builds tools for institutional allocators. I helped scale to our first $1B in AUM, ran all enterprise sales, and built the GTM organization. Backed by 776, Fin VC, Caffeinated Capital and Basis Set Ventures.",
-        },
-        {
           label: "Before — Preside (Co-Founder)",
           body: "Workflow automation for public safety and government, backed by Caffeinated Capital, Basecase VC, Banter Capital and Basis Set Ventures. We never found product-market fit — but I learned how to invest in the next generation of public-sector founders.",
+        },
+        {
+          label: "Before — Series (Employee #1)",
+          body: "Chief of Staff at Series, which builds tools for institutional allocators. I helped scale to our first $1B in AUM, ran all enterprise sales, and built the GTM organization. Backed by 776, Fin VC, Caffeinated Capital and Basis Set Ventures.",
         },
       ],
     },
