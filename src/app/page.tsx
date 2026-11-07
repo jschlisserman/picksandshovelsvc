@@ -59,7 +59,6 @@ export default function Home() {
           <div className="content-column">
             <div className="mb-9 flex flex-wrap items-end justify-between gap-4">
               <div>
-                <p className="mono-label mb-3 text-rust">Surface</p>
                 <h2 id="backed-by" className="text-headline-xl text-ink">
                   Backed by
                 </h2>
@@ -149,7 +148,6 @@ export default function Home() {
           <div className="content-column">
             <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
               <div>
-                <p className="mono-label mb-3">Bedrock</p>
                 <h2
                   id="portfolio-heading"
                   className="text-headline-xl text-ink-on-dark"
@@ -253,7 +251,6 @@ export default function Home() {
         >
           <div className="content-column">
             <div className="mb-9">
-              <p className="mono-label mb-3">Ore</p>
               <h2
                 id="about-heading"
                 className="text-headline-xl text-ink-on-dark"
