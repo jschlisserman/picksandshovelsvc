@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SiteHeader } from "@/components/SiteHeader";
 import {
   about,
   backedBy,
@@ -19,42 +20,7 @@ function initials(name: string) {
 export default function Home() {
   return (
     <>
-      <header className="strata-surface">
-        <div className="content-column flex items-center justify-between py-3 sm:py-4">
-          <a href="#top" className="inline-flex items-center no-underline">
-            <Image
-              src="/logo.png"
-              alt={firm.name}
-              width={202}
-              height={101}
-              priority
-              className="h-12 w-auto sm:h-14"
-            />
-          </a>
-          <nav className="hidden items-center gap-7 sm:flex">
-            {[
-              ["Portfolio", "#portfolio"],
-              ["About", "#about"],
-            ].map(([label, href]) => (
-              <a key={href} href={href} className="mono-label link-rust">
-                {label}
-              </a>
-            ))}
-            <a
-              href={`mailto:${firm.email}`}
-              className="rounded-full border border-clay/70 bg-surface px-4 py-2 text-body-sm text-ink no-underline transition-colors hover:border-rust/60 hover:text-rust"
-            >
-              Contact
-            </a>
-          </nav>
-          <a
-            href={`mailto:${firm.email}`}
-            className="rounded-full border border-clay/70 bg-surface px-4 py-2 text-body-sm text-ink no-underline sm:hidden"
-          >
-            Contact
-          </a>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main id="top" className="flex-1">
         {/* Hero — Surface */}
