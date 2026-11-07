@@ -20,20 +20,16 @@ export default function Home() {
   return (
     <>
       <header className="strata-surface">
-        <div className="content-column flex items-center justify-between py-6 sm:py-8">
-          <a
-            href="#top"
-            className="group flex items-center gap-3 text-ink no-underline"
-          >
-            <span
-              aria-hidden
-              className="grid size-9 place-items-center rounded-full border border-clay/60 bg-topsoil text-[10px] font-mono tracking-[0.08em] text-rust transition-colors group-hover:border-rust/50"
-            >
-              P&S
-            </span>
-            <span className="text-body font-medium tracking-tight">
-              {firm.name}
-            </span>
+        <div className="content-column flex items-center justify-between py-3 sm:py-4">
+          <a href="#top" className="inline-flex items-center no-underline">
+            <Image
+              src="/logo.png"
+              alt={firm.name}
+              width={202}
+              height={101}
+              priority
+              className="h-12 w-auto sm:h-14"
+            />
           </a>
           <nav className="hidden items-center gap-7 sm:flex">
             {[
