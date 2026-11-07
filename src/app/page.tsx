@@ -298,6 +298,12 @@ export default function Home() {
                       <p className="text-body mt-1 text-ink-on-dark-muted">
                         {person.title}
                       </p>
+                      <a
+                        href={`mailto:${person.email}`}
+                        className="text-body-sm mt-1 inline-block text-ink-on-dark-muted no-underline transition-colors hover:text-rust"
+                      >
+                        {person.email}
+                      </a>
                     </div>
                   </div>
                   {person.timeline.map((entry) => (
@@ -329,9 +335,6 @@ export default function Home() {
                 Reach out if you&apos;re deep in-domain, don&apos;t need
                 hand-holding, and are raising before a lead is locked.
               </p>
-              <a href={`mailto:${firm.email}`} className="btn-primary mt-8">
-                {firm.email}
-              </a>
             </div>
           </div>
         </section>

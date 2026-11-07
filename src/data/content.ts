@@ -273,6 +273,7 @@ export const about = {
     {
       name: "Joshua Schlisserman",
       title: "GP, Operator-Investor",
+      email: "josh@picksandshovelsvc.com",
       portrait: "/about/portrait.png",
       href: "https://www.linkedin.com/in/joshua-schlisserman/",
       timeline: [
@@ -293,6 +294,7 @@ export const about = {
     {
       name: "Janet Lee",
       title: "Venture Partner, Operator-Investor",
+      email: "janet@picksandshovelsvc.com",
       portrait: "/about/janet-lee.png",
       href: "https://www.linkedin.com/in/jayleejanet/",
       timeline: [
