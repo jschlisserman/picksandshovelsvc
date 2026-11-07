@@ -3,7 +3,8 @@ import {
   about,
   backedBy,
   firm,
-  portfolio,
+  portfolioCompanies,
+  portfolioGroups,
 } from "@/data/content";
 
 function initials(name: string) {
@@ -18,298 +19,334 @@ function initials(name: string) {
 export default function Home() {
   return (
     <>
-      <header className="content-column flex items-center justify-between py-6 sm:py-8">
-        <a
-          href="#top"
-          className="group flex items-center gap-3 text-ink no-underline"
-        >
-          <span
-            aria-hidden
-            className="grid size-9 place-items-center rounded-full border border-border bg-antigrid text-[10px] font-mono tracking-[0.08em] text-accent transition-colors group-hover:border-accent/40"
+      <header className="strata-surface">
+        <div className="content-column flex items-center justify-between py-6 sm:py-8">
+          <a
+            href="#top"
+            className="group flex items-center gap-3 text-ink no-underline"
           >
-            P&S
-          </span>
-          <span className="text-body font-medium tracking-tight">
-            {firm.name}
-          </span>
-        </a>
-        <nav className="hidden items-center gap-6 sm:flex">
-          {[
-            ["Portfolio", "#portfolio"],
-            ["About", "#about"],
-          ].map(([label, href]) => (
-            <a
-              key={href}
-              href={href}
-              className="mono-label no-underline transition-colors hover:text-ink"
+            <span
+              aria-hidden
+              className="grid size-9 place-items-center rounded-full border border-clay/60 bg-topsoil text-[10px] font-mono tracking-[0.08em] text-rust transition-colors group-hover:border-rust/50"
             >
-              {label}
+              P&S
+            </span>
+            <span className="text-body font-medium tracking-tight">
+              {firm.name}
+            </span>
+          </a>
+          <nav className="hidden items-center gap-7 sm:flex">
+            {[
+              ["Portfolio", "#portfolio"],
+              ["About", "#about"],
+            ].map(([label, href]) => (
+              <a key={href} href={href} className="mono-label link-rust">
+                {label}
+              </a>
+            ))}
+            <a
+              href={`mailto:${firm.email}`}
+              className="rounded-full border border-clay/70 bg-surface px-4 py-2 text-body-sm text-ink no-underline transition-colors hover:border-rust/60 hover:text-rust"
+            >
+              Contact
             </a>
-          ))}
+          </nav>
           <a
             href={`mailto:${firm.email}`}
-            className="rounded-full border border-border bg-elevation px-4 py-2 text-body-sm text-ink no-underline transition-colors hover:border-accent/50 hover:text-accent"
+            className="rounded-full border border-clay/70 bg-surface px-4 py-2 text-body-sm text-ink no-underline sm:hidden"
           >
             Contact
           </a>
-        </nav>
-        <a
-          href={`mailto:${firm.email}`}
-          className="rounded-full border border-border bg-elevation px-4 py-2 text-body-sm text-ink no-underline sm:hidden"
-        >
-          Contact
-        </a>
+        </div>
       </header>
 
-      <main id="top" className="flex-1 pb-20 sm:pb-28">
-        {/* Hero — brand-first, one composition */}
-        <section className="content-column relative overflow-hidden pt-10 pb-10 sm:pt-14 sm:pb-12">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-full"
-          >
-            <div className="absolute -left-24 top-10 size-[28rem] rounded-full bg-accent/[0.06] blur-3xl animate-fade" />
-            <div className="absolute right-0 top-32 size-[22rem] rounded-full bg-accent-blue/[0.05] blur-3xl animate-fade delay-2" />
-          </div>
-
-          <p className="mono-label animate-rise mb-6 text-accent">
-            Inception - Early Stage Investing
-          </p>
-          <h1 className="text-headline-3xl animate-rise delay-1 max-w-[18ch] text-ink">
-            {firm.name}
-          </h1>
-          <p className="text-body-lg animate-rise delay-2 mt-6 max-w-[34ch] text-ink-soft">
-            {firm.tagline}
-          </p>
-          <div className="animate-rise delay-3 mt-10 flex flex-wrap items-center gap-3">
-            <a
-              href={`mailto:${firm.email}`}
-              className="inline-flex items-center rounded-full bg-accent px-5 py-2.5 text-body-sm font-medium text-bg no-underline transition-opacity hover:opacity-90"
-            >
-              Reach out
-            </a>
-            <a
-              href="#portfolio"
-              className="inline-flex items-center rounded-full border border-border px-5 py-2.5 text-body-sm text-ink-soft no-underline transition-colors hover:border-ink-faint hover:text-ink"
-            >
-              Portfolio
-            </a>
-          </div>
-        </section>
-
-        {/* Backed by */}
-        <section className="content-column py-8 sm:py-10" aria-labelledby="backed-by">
-          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="mono-label mb-3">Network</p>
-              <h2 id="backed-by" className="text-headline-xl text-ink">
-                Backed by
-              </h2>
-            </div>
-            <p className="text-body-sm max-w-sm text-ink-muted">
-              Operators and GPs who diligence deals and open doors when it
-              matters.
+      <main id="top" className="flex-1">
+        {/* Hero — Surface */}
+        <section className="hero-atmosphere strata relative overflow-hidden pb-14 pt-10 sm:pb-20 sm:pt-16">
+          <div className="content-column relative">
+            <p className="mono-label animate-rise mb-6 text-rust">
+              Inception &amp; Early Stage
             </p>
+            <h1 className="text-headline-3xl animate-rise delay-1 max-w-[14ch] text-ink">
+              {firm.name}
+            </h1>
+            <p className="text-body-lg animate-rise delay-2 mt-6 max-w-[38ch] text-ink-soft">
+              {firm.tagline}
+            </p>
+            <p className="text-body-sm animate-rise delay-3 mt-4 max-w-[36ch] text-ink-muted">
+              {firm.secondaryLine}
+            </p>
+            <div className="animate-rise delay-4 mt-10 flex flex-wrap items-center gap-3">
+              <a href={`mailto:${firm.email}`} className="btn-primary">
+                Reach out
+              </a>
+              <a href="#portfolio" className="btn-secondary">
+                See the portfolio
+              </a>
+            </div>
           </div>
-
-          <ul className="anti-grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
-            {backedBy.map((person) => {
-              const inner = (
-                <>
-                  <span
-                    aria-hidden
-                    className="grid size-11 shrink-0 place-items-center rounded-full border border-border bg-elevation font-mono text-[11px] tracking-wide text-ink-soft"
-                  >
-                    {initials(person.name)}
-                  </span>
-                  <div className="min-w-0">
-                    <p className="text-body-sm font-medium leading-snug text-ink">
-                      {person.name}
-                    </p>
-                    <p className="text-body-sm leading-snug text-ink-muted">
-                      {person.role}
-                    </p>
-                  </div>
-                </>
-              );
-
-              return (
-                <li key={person.name}>
-                  {person.href ? (
-                    <a
-                      href={person.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="box flex items-start gap-3 p-4 no-underline sm:p-5"
-                    >
-                      {inner}
-                    </a>
-                  ) : (
-                    <div className="box flex items-start gap-3 p-4 sm:p-5">
-                      {inner}
-                    </div>
-                  )}
-                </li>
-              );
-            })}
-            <li className="box flex items-start gap-3 border-dashed p-4 text-ink-muted sm:p-5">
-              <span
-                aria-hidden
-                className="grid size-11 shrink-0 place-items-center rounded-full border border-dashed border-ink-faint font-mono text-sm"
-              >
-                +
-              </span>
-              <p className="text-body-sm leading-snug">and others</p>
-            </li>
-          </ul>
         </section>
 
-        {/* Portfolio */}
+        <div className="strata-seam animate-seam" aria-hidden />
+
+        {/* Backers — Topsoil / Surface label */}
         <section
-          id="portfolio"
-          className="content-column scroll-mt-8 py-10 sm:py-14"
-          aria-labelledby="portfolio-heading"
+          className="strata strata-topsoil py-12 sm:py-16"
+          aria-labelledby="backed-by"
         >
-          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="mono-label mb-3">Companies</p>
-              <h2 id="portfolio-heading" className="text-headline-xl text-ink">
-                Portfolio
-              </h2>
+          <div className="content-column">
+            <div className="mb-9 flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <p className="mono-label mb-3 text-rust">Surface</p>
+                <h2 id="backed-by" className="text-headline-xl text-ink">
+                  Backed by
+                </h2>
+              </div>
+              <p className="text-body-sm max-w-sm text-ink-muted">
+                Operators and GPs who diligence deals and open doors when it
+                matters.
+              </p>
             </div>
-            <p className="text-body-sm text-ink-muted">
-              * = angel investment
-            </p>
-          </div>
 
-          <ul className="anti-grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
-            {portfolio.map((company) => {
-              const inner = (
-                <>
-                  <div className="mb-4 flex h-10 w-full items-center justify-start">
-                    {company.logo ? (
-                      <Image
-                        src={company.logo}
-                        alt={`${company.name} logo`}
-                        width={120}
-                        height={40}
-                        className="h-8 w-auto max-w-[140px] object-contain object-left"
-                      />
-                    ) : (
-                      <div
-                        aria-hidden
-                        className="flex h-10 w-full items-center justify-center rounded-md border border-dashed border-border bg-elevation/60 font-mono text-[10px] tracking-[0.14em] text-ink-faint transition-colors group-hover:border-accent/30 group-hover:text-ink-muted"
+            <ul className="grid grid-cols-2 gap-[var(--spacing-gutter)] sm:grid-cols-3 lg:grid-cols-4">
+              {backedBy.map((person) => {
+                const inner = (
+                  <>
+                    <span
+                      aria-hidden
+                      className="grid size-11 shrink-0 place-items-center rounded-full border border-clay/50 bg-topsoil font-mono text-[11px] tracking-wide text-ink-soft"
+                    >
+                      {initials(person.name)}
+                    </span>
+                    <div className="min-w-0">
+                      <p className="text-body-sm font-medium leading-snug text-ink">
+                        {person.name}
+                      </p>
+                      <p className="text-body-sm leading-snug text-ink-muted">
+                        {person.role}
+                      </p>
+                    </div>
+                  </>
+                );
+
+                return (
+                  <li key={person.name}>
+                    {person.href ? (
+                      <a
+                        href={person.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="panel flex items-start gap-3 p-4 no-underline sm:p-5"
                       >
-                        LOGO
+                        {inner}
+                      </a>
+                    ) : (
+                      <div className="panel flex items-start gap-3 p-4 sm:p-5">
+                        {inner}
                       </div>
                     )}
-                  </div>
-                  <div>
-                    <p className="text-body-sm font-medium text-ink">
-                      {company.name}
-                      {company.stealth ? (
-                        <span className="text-accent">*</span>
-                      ) : null}
-                    </p>
-                    <p className="mono-label mt-1 normal-case tracking-normal">
-                      {company.stage ?? "—"}
-                    </p>
-                  </div>
-                </>
-              );
-
-              const className =
-                "box group flex min-h-[7.5rem] flex-col justify-between p-4 no-underline sm:min-h-[8.5rem] sm:p-5";
-
-              return (
-                <li key={company.name}>
-                  {company.href ? (
-                    <a
-                      href={company.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={className}
-                    >
-                      {inner}
-                    </a>
-                  ) : (
-                    <div className={className}>{inner}</div>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
+                  </li>
+                );
+              })}
+              <li className="panel flex items-start gap-3 border-dashed p-4 text-ink-muted sm:p-5">
+                <span
+                  aria-hidden
+                  className="grid size-11 shrink-0 place-items-center rounded-full border border-dashed border-clay font-mono text-sm"
+                >
+                  +
+                </span>
+                <p className="text-body-sm leading-snug">and others</p>
+              </li>
+            </ul>
+          </div>
         </section>
 
-        {/* About */}
+        <div className="strata-seam strata-seam-dark" aria-hidden />
+
+        {/* Portfolio — Bedrock */}
+        <section
+          id="portfolio"
+          className="strata strata-bedrock strata-dark scroll-mt-8 py-14 sm:py-20"
+          aria-labelledby="portfolio-heading"
+        >
+          <div className="content-column">
+            <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <p className="mono-label mb-3">Bedrock</p>
+                <h2
+                  id="portfolio-heading"
+                  className="text-headline-xl text-ink-on-dark"
+                >
+                  Portfolio
+                </h2>
+                <p className="text-body mt-3 max-w-md text-ink-on-dark-muted">
+                  The tools underneath.
+                </p>
+              </div>
+              <p className="text-body-sm text-ink-on-dark-muted">
+                * = angel investment
+              </p>
+            </div>
+
+            <div className="space-y-12 sm:space-y-14">
+              {portfolioGroups.map((group) => (
+                <div key={group.label}>
+                  <div className="mb-5 flex items-center gap-4">
+                    <h3 className="mono-label shrink-0 text-rust">
+                      {group.label}
+                    </h3>
+                    <div
+                      aria-hidden
+                      className="h-px flex-1 bg-gradient-to-r from-clay/25 to-transparent"
+                    />
+                  </div>
+                  <ul className="grid grid-cols-2 gap-[var(--spacing-gutter)] sm:grid-cols-3 lg:grid-cols-4">
+                    {group.companies.map((key) => {
+                      const company = portfolioCompanies[key];
+                      if (!company) return null;
+
+                      const inner = (
+                        <>
+                          <div className="mb-4 flex h-10 w-full items-center justify-start">
+                            {company.logo ? (
+                              <Image
+                                src={company.logo}
+                                alt={`${company.name} logo`}
+                                width={120}
+                                height={40}
+                                className="h-8 w-auto max-w-[140px] object-contain object-left"
+                              />
+                            ) : (
+                              <div
+                                aria-hidden
+                                className="flex h-10 w-full items-center justify-center rounded-md border border-dashed border-clay/25 bg-ore/40 font-mono text-[10px] tracking-[0.14em] text-ink-on-dark-muted"
+                              >
+                                LOGO
+                              </div>
+                            )}
+                          </div>
+                          <div>
+                            <p className="text-body-sm font-medium text-ink-on-dark">
+                              {company.name}
+                              {company.stealth ? (
+                                <span className="text-rust">*</span>
+                              ) : null}
+                            </p>
+                            <p className="mono-label mt-1 normal-case tracking-normal">
+                              {company.stage ?? "—"}
+                            </p>
+                          </div>
+                        </>
+                      );
+
+                      const className =
+                        "panel-dark panel-portfolio group flex min-h-[7.5rem] flex-col justify-between p-4 no-underline sm:min-h-[8.5rem] sm:p-5";
+
+                      return (
+                        <li key={company.name}>
+                          {company.href ? (
+                            <a
+                              href={company.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={className}
+                            >
+                              {inner}
+                            </a>
+                          ) : (
+                            <div className={className}>{inner}</div>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <div className="strata-seam strata-seam-dark" aria-hidden />
+
+        {/* About — Ore */}
         <section
           id="about"
-          className="content-column scroll-mt-8 py-10 sm:py-14"
+          className="strata strata-ore strata-dark scroll-mt-8 py-14 sm:py-20"
           aria-labelledby="about-heading"
         >
-          <div className="mb-8">
-            <p className="mono-label mb-3">Operator-Investor</p>
-            <h2 id="about-heading" className="text-headline-xl text-ink">
-              About
-            </h2>
-          </div>
-
-          <div className="box divide-y divide-[var(--color-ds-border-antigrid)] overflow-hidden p-0">
-            <div className="flex items-center gap-4 p-5 sm:p-6">
-              <Image
-                src={about.portrait}
-                alt={about.name}
-                width={112}
-                height={112}
-                className="size-24 shrink-0 rounded-lg object-cover sm:size-28"
-              />
-              <div className="min-w-0">
-                <h3 className="text-headline-md text-ink">{about.name}</h3>
-                <p className="text-body mt-1 text-ink-muted">{about.title}</p>
-              </div>
+          <div className="content-column">
+            <div className="mb-9">
+              <p className="mono-label mb-3">Ore</p>
+              <h2
+                id="about-heading"
+                className="text-headline-xl text-ink-on-dark"
+              >
+                About
+              </h2>
             </div>
-            {about.timeline.map((entry) => (
-              <article key={entry.label} className="p-5 sm:p-6">
-                <p className="mono-label mb-3 text-accent">{entry.label}</p>
-                <p className="text-body text-ink-soft">{entry.body}</p>
-              </article>
-            ))}
-            <div className="bg-elevation p-5 sm:p-6">
-              <p className="text-body text-ink">{about.summary}</p>
+
+            <div className="panel-dark divide-y divide-clay/15 overflow-hidden p-0">
+              <div className="flex items-center gap-4 p-5 sm:p-6">
+                <Image
+                  src={about.portrait}
+                  alt={about.name}
+                  width={112}
+                  height={112}
+                  className="size-24 shrink-0 rounded-lg object-cover sm:size-28"
+                />
+                <div className="min-w-0">
+                  <h3 className="text-headline-md text-ink-on-dark">
+                    {about.name}
+                  </h3>
+                  <p className="text-body mt-1 text-ink-on-dark-muted">
+                    {about.title}
+                  </p>
+                </div>
+              </div>
+              <div className="bg-ore/50 p-5 sm:p-6">
+                <p className="text-body text-ink-on-dark">{about.summary}</p>
+              </div>
+              {about.timeline.map((entry) => (
+                <article key={entry.label} className="p-5 sm:p-6">
+                  <p className="mono-label mb-3 text-rust">{entry.label}</p>
+                  <p className="text-body text-ink-on-dark-soft">{entry.body}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Closing CTA */}
-        <section className="content-column pt-6 sm:pt-10">
-          <div className="box relative overflow-hidden p-7 sm:p-10">
-            <div
-              aria-hidden
-              className="pointer-events-none absolute -right-16 -top-16 size-56 rounded-full bg-accent/10 blur-3xl"
-            />
-            <p className="mono-label mb-4 text-accent">Founders</p>
-            <h2 className="text-headline-lg max-w-[22ch] text-ink">
-              Building something non-consensus?
-            </h2>
-            <p className="text-body mt-4 max-w-lg text-ink-muted">
-              Reach out if you’re deep in-domain, don’t need
-              hand-holding, and are raising before a lead is locked.
-            </p>
-            <a
-              href={`mailto:${firm.email}`}
-              className="mt-8 inline-flex items-center rounded-full bg-accent px-5 py-2.5 text-body-sm font-medium text-bg no-underline transition-opacity hover:opacity-90"
-            >
-              {firm.email}
-            </a>
+        {/* Closing CTA — Ore */}
+        <section className="strata strata-ore strata-dark pb-16 sm:pb-24">
+          <div className="content-column">
+            <div className="panel-dark relative overflow-hidden p-7 sm:p-10">
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -right-20 -top-20 size-64 rounded-full bg-rust/10 blur-3xl"
+              />
+              <h2 className="text-headline-lg max-w-[18ch] text-ink-on-dark">
+                Building a shovel?
+              </h2>
+              <p className="text-body mt-4 max-w-lg text-ink-on-dark-muted">
+                Reach out if you&apos;re deep in-domain, don&apos;t need
+                hand-holding, and are raising before a lead is locked.
+              </p>
+              <a href={`mailto:${firm.email}`} className="btn-primary mt-8">
+                {firm.email}
+              </a>
+            </div>
           </div>
         </section>
       </main>
 
-      <footer className="content-column border-t border-border py-8">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-body-sm text-ink-muted">{firm.name}</p>
-          <p className="mono-label normal-case tracking-normal">
-            Non-consensus → consensus
+      <footer className="strata strata-ore strata-dark border-t border-clay/15">
+        <div className="content-column py-8">
+          <p className="text-body-sm text-ink-on-dark-muted">
+            Picks and Shovels · Non-consensus{" "}
+            <span className="gold-arrow" aria-hidden>
+              →
+            </span>{" "}
+            consensus
           </p>
         </div>
       </footer>

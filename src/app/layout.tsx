@@ -11,13 +11,13 @@ const instrumentSans = Instrument_Sans({
 export const metadata: Metadata = {
   title: "Picks and Shovels",
   description:
-    "Investing in non-consensus companies before they become consensus.",
+    "Backing the tools every gold rush needs. Infra, dev tools, and financial rails, funded before the rush.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${instrumentSans.variable} h-full antialiased`}>
-      <body className="site-atmosphere min-h-full flex flex-col font-sans">
+      <body className="min-h-full flex flex-col bg-surface font-sans text-ink">
         {children}
       </body>
     </html>

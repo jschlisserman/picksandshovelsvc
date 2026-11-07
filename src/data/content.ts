@@ -1,6 +1,8 @@
 export const firm = {
   name: "Picks and Shovels",
-  tagline: "Generalist Investor",
+  tagline:
+    "Backing the tools every gold rush needs. Infra, dev tools, and financial rails, funded before the rush.",
+  secondaryLine: "Non-consensus today. Load-bearing tomorrow.",
   email: "josh@picksandshovelsvc.com",
 } as const;
 
@@ -23,99 +25,175 @@ export const backedBy = [
   { name: "Evan Fisher", role: "Portal VC", href: "https://www.linkedin.com/in/evanfisher1/" },
   { name: "Brexton Pham", role: "Cantor Fitzgerald", href: "https://www.linkedin.com/in/brextonpham/" },
   { name: "Ariana Thacker", role: "MoldCo", href: "https://www.linkedin.com/in/arianadthacker/" },
-  { name: "Luke Girgis", role: "Rolling Stone (AU)", href: "https://www.linkedin.com/in/lukegirgis/" },
   { name: "TX Zhuo", role: "Fika VC", href: "https://www.linkedin.com/in/tianxiangzhuo/" },
 ] as const;
 
-export const portfolio = [
-  {
+export type PortfolioCompany = {
+  name: string;
+  stage: string;
+  stealth: boolean;
+  logo?: string;
+  href?: string;
+};
+
+/** Flat registry — reassign companies via portfolioGroups below. */
+export const portfolioCompanies: Record<string, PortfolioCompany> = {
+  Mastra: {
     name: "Mastra",
     stage: "Pre-Seed",
     stealth: false,
     logo: "/portfolio/mastra.png",
     href: "https://mastra.ai/",
   },
-  {
-    name: "Sunbeam",
-    stage: "Pre-Seed",
-    stealth: false,
-    logo: "/portfolio/sunbeam.png",
-    href: "https://www.sunbeam.ai/",
-  },
-  {
-    name: "Eventual",
-    stage: "Pre-Seed",
-    stealth: false,
-    logo: "/portfolio/eventual.png",
-    href: "https://eventual.com/",
-  },
-  {
-    name: "Slingshot AI",
-    stage: "Seed",
-    stealth: false,
-    logo: "/portfolio/slingshot-ai.png",
-    href: "https://slingshotai.com/",
-  },
-  {
-    name: "Concrete Protocol",
-    stage: "Pre-Seed",
-    stealth: false,
-    logo: "/portfolio/concrete-protocol.png",
-    href: "https://concrete.xyz/",
-  },
-  {
-    name: "Skip (acq)",
-    stage: "Seed",
-    stealth: false,
-    logo: "/portfolio/skip.png",
-    href: "https://www.skip.build/",
-  },
-  {
-    name: "Paxos Labs",
-    stage: "Pre-Seed",
-    stealth: false,
-    logo: "/portfolio/paxos-labs.png",
-    href: "https://www.paxoslabs.com/",
-  },
-  {
+  "Flux AI": {
     name: "Flux AI",
     stage: "Seed",
     stealth: false,
     logo: "/portfolio/flux-ai.png",
     href: "https://www.flux.ai/p",
   },
-  {
-    name: "Paralign Labs",
-    stage: "Seed",
-    stealth: false,
-    logo: "/portfolio/paralign-labs.png",
-    href: "https://paralignlabs.com/",
-  },
-  {
-    name: "Default",
-    stage: "Seed",
-    stealth: true,
-    logo: "/portfolio/default.png",
-    href: "https://www.default.com/",
-  },
-  {
+  GitCafe: {
     name: "GitCafe",
     stage: "Seed",
     stealth: true,
     logo: "/portfolio/gitcafe.png",
     href: "https://www.git.cafe",
   },
-  { name: "AIHG", stage: "Seed", stealth: true, logo: "/portfolio/aihg.png", href: "https://aihg.com/" },
-  { name: "Rivet", stage: "Pre-Seed", stealth: true, logo: "/portfolio/rivet.png", href: "https://www.rivet.tax/" },
-  { name: "Silo Markets", stage: "Pre-Seed", stealth: true, logo: "/portfolio/silo-markets.png", href: "https://www.silomarkets.com/" },
-  { name: "Biom", stage: "Pre-Seed", stealth: true, logo: "/portfolio/biom.png", href: "https://getbiom.co/" },
-  { name: "Aviron", stage: "Pre-Seed", stealth: true, logo: "/portfolio/aviron.png", href: "https://www.avironactive.com/" },
+  "Paralign Labs": {
+    name: "Paralign Labs",
+    stage: "Seed",
+    stealth: false,
+    logo: "/portfolio/paralign-labs.png",
+    href: "https://paralignlabs.com/",
+  },
+  Baselayer: {
+    name: "Baselayer",
+    stage: "Seed",
+    stealth: false,
+    logo: "/portfolio/baselayer.png",
+    href: "https://baselayer.com/",
+  },
+  "Paxos Labs": {
+    name: "Paxos Labs",
+    stage: "Pre-Seed",
+    stealth: false,
+    logo: "/portfolio/paxos-labs.png",
+    href: "https://www.paxoslabs.com/",
+  },
+  "Concrete Protocol": {
+    name: "Concrete Protocol",
+    stage: "Pre-Seed",
+    stealth: false,
+    logo: "/portfolio/concrete-protocol.png",
+    href: "https://concrete.xyz/",
+  },
+  "Skip (acq)": {
+    name: "Skip (acq)",
+    stage: "Seed",
+    stealth: false,
+    logo: "/portfolio/skip.png",
+    href: "https://www.skip.build/",
+  },
+  "Silo Markets": {
+    name: "Silo Markets",
+    stage: "Pre-Seed",
+    stealth: true,
+    logo: "/portfolio/silo-markets.png",
+    href: "https://www.silomarkets.com/",
+  },
+  Sunbeam: {
+    name: "Sunbeam",
+    stage: "Pre-Seed",
+    stealth: false,
+    logo: "/portfolio/sunbeam.png",
+    href: "https://www.sunbeam.ai/",
+  },
+  "Slingshot AI": {
+    name: "Slingshot AI",
+    stage: "Seed",
+    stealth: false,
+    logo: "/portfolio/slingshot-ai.png",
+    href: "https://slingshotai.com/",
+  },
+  Eventual: {
+    name: "Eventual",
+    stage: "Pre-Seed",
+    stealth: false,
+    logo: "/portfolio/eventual.png",
+    href: "https://eventual.com/",
+  },
+  AIHG: {
+    name: "AIHG",
+    stage: "Seed",
+    stealth: true,
+    logo: "/portfolio/aihg.png",
+    href: "https://aihg.com/",
+  },
+  Rivet: {
+    name: "Rivet",
+    stage: "Pre-Seed",
+    stealth: true,
+    logo: "/portfolio/rivet.png",
+    href: "https://www.rivet.tax/",
+  },
+  Default: {
+    name: "Default",
+    stage: "Seed",
+    stealth: true,
+    logo: "/portfolio/default.png",
+    href: "https://www.default.com/",
+  },
+  Biom: {
+    name: "Biom",
+    stage: "Pre-Seed",
+    stealth: true,
+    logo: "/portfolio/biom.png",
+    href: "https://getbiom.co/",
+  },
+  Aviron: {
+    name: "Aviron",
+    stage: "Pre-Seed",
+    stealth: true,
+    logo: "/portfolio/aviron.png",
+    href: "https://www.avironactive.com/",
+  },
+};
+
+/**
+ * Display order and grouping. Reassign by moving company keys between groups.
+ * Keys must match portfolioCompanies.
+ */
+export const portfolioGroups = [
+  {
+    label: "AI Infra & Dev Tools",
+    companies: ["Mastra", "Flux AI", "GitCafe", "Paralign Labs"],
+  },
+  {
+    label: "Financial Rails",
+    companies: [
+      "Baselayer",
+      "Paxos Labs",
+      "Concrete Protocol",
+      "Skip (acq)",
+      "Silo Markets",
+    ],
+  },
+  {
+    label: "Applied AI",
+    companies: ["Sunbeam", "Slingshot AI", "Eventual", "Default"],
+  },
+  {
+    label: "AI Native Services",
+    companies: ["Rivet", "AIHG"],
+  },
 ] as const;
 
 export const about = {
   name: "Joshua Schlisserman",
   title: "GP, Operator-Investor",
   portrait: "/about/portrait.png",
+  summary:
+    "I specialize in taking companies from $0 to $10M+ in ARR, finding problem-market fit, and intentionally scaling an organization. I plan to share those learnings with the next generation of picks-and-shovels founders.",
   timeline: [
     {
       label: "Now — Mastra (Port Co)",
@@ -130,6 +208,4 @@ export const about = {
       body: "Workflow automation for public safety and government, backed by Caffeinated Capital, Basecase VC, Banter Capital and Basis Set Ventures. We never found product-market fit — but I learned how to invest in the next generation of public-sector founders.",
     },
   ],
-  summary:
-    "I specialize in taking companies from $0 to $10M+ in ARR, finding problem-market fit, and intentionally scaling an organization. I plan to share those learnings with the next generation of picks-and-shovels founders.",
 } as const;
