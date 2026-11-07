@@ -137,6 +137,13 @@ export const portfolioCompanies: Record<string, PortfolioCompany> = {
     logo: "/portfolio/paralign-labs.png",
     href: "https://paralignlabs.com/",
   },
+  "Olympix AI": {
+    name: "Olympix AI",
+    stage: "Seed",
+    stealth: false,
+    logo: "/portfolio/olympix-ai.png",
+    href: "https://olympix.security/",
+  },
   Baselayer: {
     name: "Baselayer",
     stage: "Seed",
@@ -237,7 +244,7 @@ export const portfolioCompanies: Record<string, PortfolioCompany> = {
 export const portfolioGroups = [
   {
     label: "AI Infra & Dev Tools",
-    companies: ["Mastra", "Flux AI", "GitCafe", "Paralign Labs"],
+    companies: ["Mastra", "Flux AI", "GitCafe", "Paralign Labs", "Olympix AI"],
   },
   {
     label: "Financial Rails",
