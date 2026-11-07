@@ -72,14 +72,29 @@ export default function Home() {
 
             <ul className="grid grid-cols-2 gap-[var(--spacing-gutter)] sm:grid-cols-3 lg:grid-cols-4">
               {backedBy.map((person) => {
+                const photo =
+                  "photo" in person && typeof person.photo === "string"
+                    ? person.photo
+                    : undefined;
+
                 const inner = (
                   <>
-                    <span
-                      aria-hidden
-                      className="grid size-11 shrink-0 place-items-center rounded-full border border-clay/50 bg-topsoil font-mono text-[11px] tracking-wide text-ink-soft"
-                    >
-                      {initials(person.name)}
-                    </span>
+                    {photo ? (
+                      <Image
+                        src={photo}
+                        alt=""
+                        width={44}
+                        height={44}
+                        className="size-11 shrink-0 rounded-full object-cover"
+                      />
+                    ) : (
+                      <span
+                        aria-hidden
+                        className="grid size-11 shrink-0 place-items-center rounded-full border border-clay/50 bg-topsoil font-mono text-[11px] tracking-wide text-ink-soft"
+                      >
+                        {initials(person.name)}
+                      </span>
+                    )}
                     <div className="min-w-0">
                       <p className="text-body-sm font-medium leading-snug text-ink">
                         {person.name}
