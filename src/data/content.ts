@@ -257,7 +257,7 @@ export const portfolioGroups = [
     ],
   },
   {
-    label: "Applied AI",
+    label: "Applied AI and Apps",
     companies: ["Sunbeam", "Slingshot AI", "Eventual", "Default"],
   },
   {
